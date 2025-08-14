@@ -1,0 +1,37 @@
+{
+  "name": "Streak",
+  "description": "Track your streak of not visiting distracting sites like YouTube or Netflix.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "declarativeNetRequest",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Streak",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+  ,
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html",
+        "blocked.css",
+        "blocked.js",
+        "assets/motivational_poster.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
